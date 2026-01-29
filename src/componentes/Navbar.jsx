@@ -1,30 +1,36 @@
+import logo1 from "../assets/logo_brocha.png";
+import logo2 from "../assets/logo_texto.png"; // segunda imagen
+
 export default function Navbar() {
   return (
-    <nav className="bg-btn-primary-default text-text-default w-full py-navbar-y text-tiny-navbar mb-bottom-navbar">
-      <div className="w-[90%] mx-auto flex justify-between items-center">
-        {/* Logo / Nombre */}
-        <span className="text-2xl">Gestor de Usuarios</span>
+    <nav className="w-full bg-black shadow-md">
+      <div className="w-[90%] mx-auto flex items-center justify-between py-4">
         
-        {/* Enlaces de navegación */}
-        <ul className="flex list-none">
-          <li>
-            <a
-              href="#"
-              className="text-text-default no-underline hover:text-text-disabled"
-            >
-              Inicio
-            </a>
-          </li>
-          <li className="ml-left-default">
-            <a
-              href="#"
-              className="text-text-default no-underline hover:text-text-disabled"
-            >
-              Contactanos
-            </a>
-          </li>
+        {/* Logos */}
+        <div className="flex items-center gap-4">
+          <img
+            src={logo1}
+            alt="Logo 1"
+            className="h-18 w-auto cursor-pointer object-contain"
+          />
+          <img
+            src={logo2}
+            alt="Logo 2"
+            className="h-18 w-auto cursor-pointer object-contain"
+          />
+        </div>
+
+        {/* Links */}
+        <ul className="flex items-center gap-8 text-base font-medium text-blue-500">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contáctanos</a></li>
         </ul>
+
       </div>
     </nav>
   );
 }
+
+
