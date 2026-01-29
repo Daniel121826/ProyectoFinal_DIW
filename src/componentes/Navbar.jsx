@@ -7,7 +7,7 @@ export default function Navbar() {
       <div className="w-[90%] mx-auto flex items-center justify-between py-4">
         
         {/* Logos */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center">
           <img
             src={logo1}
             alt="Logo 1"
