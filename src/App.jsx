@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div>
-     <Navbar/>
+     <Navbar/><br />
       <Footer/>
     </div>
   )
