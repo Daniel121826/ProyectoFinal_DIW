@@ -1,5 +1,5 @@
 import logo1 from "../assets/logo_brocha.png";
-import logo2 from "../assets/logo_texto.png"; // segunda imagen
+import logo2 from "../assets/logo_texto.png";
 
 export default function Navbar() {
   return (
