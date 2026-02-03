@@ -16,7 +16,7 @@ export default function Footer() {
           <img
             src={logo}
             alt="Logo"
-            className="h-16 w-auto object-contain"
+            className="h-24 w-24 object-cover rounded-full border-2 border-white"
           />
         </div>
 
