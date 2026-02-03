@@ -1,14 +1,14 @@
 import './App.css'
 import Navbar from './componentes/Navbar'
 import Footer from './componentes/Footer'
-import ContactForm from './componentes/ContactForm'
+import ContactSection from './componentes/ContactSection'
 
 function App() {
 
   return (
     <div>
-     <Navbar/><br />
-     <ContactForm />
+     <Navbar/>
+     <ContactSection />
       <Footer/>
     </div>
   )
