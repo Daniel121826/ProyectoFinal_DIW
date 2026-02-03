@@ -7,7 +7,6 @@ export default function Card({ title, subtitle, image, children, className = "" 
         ${className}
       `}
     >
-      {/* Imagen */}
       {image && (
         <div className="w-full h-48 overflow-hidden">
           <img
@@ -18,7 +17,6 @@ export default function Card({ title, subtitle, image, children, className = "" 
         </div>
       )}
 
-      {/* Contenido */}
       <div className="p-6 flex flex-col gap-3">
         {title && <h3 className="text-xl font-bold text-gray-800">{title}</h3>}
         {subtitle && <h4 className="text-sm text-gray-500">{subtitle}</h4>}
