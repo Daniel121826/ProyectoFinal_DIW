@@ -19,7 +19,10 @@ export default function ClientsSection() {
   return (
     <div className="relative w-full h-[600px] overflow-hidden">
       {/* Carrusel horizontal */}
-      <div className="absolute inset-0 flex transition-transform duration-1000" style={{ transform: `translateX(-${currentBg * 100}%)` }}>
+      <div
+        className="absolute inset-0 flex transition-transform duration-1000"
+        style={{ transform: `translateX(-${currentBg * 100}%)` }}
+      >
         {backgrounds.map((bg, index) => (
           <div
             key={index}
@@ -33,25 +36,32 @@ export default function ClientsSection() {
       <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Contenido superpuesto */}
-      <div className="relative z-10 w-full mx-auto h-full flex flex-col justify-center items-center text-center text-white gap-8">
-        <h1 className="text-6xl md:text-5xl font-bold">LO QUE DICEN NUESTROS CLIENTES</h1>
+      <div className="relative z-10 w-full h-full flex flex-col justify-center items-center text-center text-white gap-8">
+        <h1 className="text-6xl md:text-5xl font-bold">
+          LO QUE DICEN NUESTROS CLIENTES
+        </h1>
         <p className="text-base md:text-lg max-w-2xl">
-          Nuestros clientes valoran nuestros proyectos por la calidad, rapidez y creatividad.  
-          Aquí algunos datos que muestran su satisfacción:
+          Nuestros clientes valoran nuestros proyectos por la calidad, rapidez y
+          creatividad. Aquí algunos datos que muestran su satisfacción:
         </p>
 
-        <div className="flex md:flex-row gap-8 mt-6 justify-between w-full max-w-4xl">
-          <div className="flex flex-col items-center gap-2">
+        <div className="flex md:flex-row gap-8 mt-12 justify-between w-full max-w-4xl">
+          {/* Primer icono */}
+          <div className="flex flex-col items-center gap-2 translate-y-4 md:translate-y-6">
             <FaStar className="text-yellow-400 text-4xl" />
             <span className="font-bold text-xl">97%</span>
             <p className="text-sm">Nos califican como sobresaliente</p>
           </div>
-          <div className="flex flex-col items-center gap-2">
+
+          {/* Icono del medio */}
+          <div className="flex flex-col items-center gap-2 -translate-y-4 md:-translate-y-6">
             <FaSmile className="text-green-400 text-4xl" />
             <span className="font-bold text-xl">92%</span>
             <p className="text-sm">Satisfechos con nuestro servicio</p>
           </div>
-          <div className="flex flex-col items-center gap-2">
+
+          {/* Tercer icono */}
+          <div className="flex flex-col items-center gap-2 translate-y-4 md:translate-y-6">
             <FaThumbsUp className="text-blue-400 text-4xl" />
             <span className="font-bold text-xl">88%</span>
             <p className="text-sm">Recomiendan nuestros proyectos</p>
@@ -61,4 +71,3 @@ export default function ClientsSection() {
     </div>
   );
 }
-

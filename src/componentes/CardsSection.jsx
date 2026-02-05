@@ -7,9 +7,8 @@ import toolsVideo from "../assets/AidanCreative.mp4";
 
 export default function ToolsSection() {
   return (
-    <div className="w-full py-20 bg-gray-50">
+    <div className="w-full py-20 bg-gray-50 text-center sm:text-start">
       <div className="w-[90%] mx-auto flex flex-col lg:flex-row gap-8">
-
         {/* Card grande izquierda */}
         <div className="flex-1">
           <Card
@@ -18,11 +17,16 @@ export default function ToolsSection() {
             className="h-full"
           >
             <p className="text-gray-700 mt-2">
-              Ofrecemos una suite completa de herramientas para diseñar, analizar y mejorar cada aspecto de tu proyecto. Desde marketing digital hasta gestión de contenido y análisis de datos, tenemos todo lo que tu empresa necesita.
+              Ofrecemos una suite completa de herramientas para diseñar,
+              analizar y mejorar cada aspecto de tu proyecto. Desde marketing
+              digital hasta gestión de contenido y análisis de datos, tenemos
+              todo lo que tu empresa necesita.
             </p>
 
-             <p className="text-gray-700 mt-2">
-              Descubre más sobre nostros, nuestras herramientas y cómo podemos ayudarte a alcanzar tus objetivos empresariales. ¡Estamos aquí para apoyarte en cada paso del camino!
+            <p className="text-gray-700 mt-2">
+              Descubre más sobre nostros, nuestras herramientas y cómo podemos
+              ayudarte a alcanzar tus objetivos empresariales. ¡Estamos aquí
+              para apoyarte en cada paso del camino!
             </p>
             <div className="mt-4 w-full">
               <video
@@ -36,45 +40,35 @@ export default function ToolsSection() {
 
         {/* Cards pequeñas derecha */}
         <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Card
-            title="Diseño Gráfico"
-            image={smallImage1}
-          >
+          <Card title="Diseño Gráfico" image={smallImage1}>
             <p className="text-gray-700 text-sm mt-1">
-              Crea diseños profesionales y atractivos para tus campañas y redes sociales.
+              Crea diseños profesionales y atractivos para tus campañas y redes
+              sociales.
             </p>
           </Card>
 
-          <Card
-            title="Marketing Digital"
-            image={smallImage2}
-          >
+          <Card title="Marketing Digital" image={smallImage2}>
             <p className="text-gray-700 text-sm mt-1">
-              Optimiza tu presencia online y llega a tu público objetivo de manera efectiva.
+              Optimiza tu presencia online y llega a tu público objetivo de
+              manera efectiva.
             </p>
           </Card>
 
-          <Card
-            title="Desarrollo Web"
-            image={smallImage3}
-          >
+          <Card title="Desarrollo Web" image={smallImage3}>
             <p className="text-gray-700 text-sm mt-1">
-              Diseña y desarrolla páginas web modernas, responsivas y optimizadas.
+              Diseña y desarrolla páginas web modernas, responsivas y
+              optimizadas.
             </p>
           </Card>
 
-          <Card
-            title="Analítica de Datos"
-            image={smallImage4}
-          >
+          <Card title="Analítica de Datos" image={smallImage4}>
             <p className="text-gray-700 text-sm mt-1">
-              Analiza el rendimiento de tu empresa y toma decisiones basadas en datos.
+              Analiza el rendimiento de tu empresa y toma decisiones basadas en
+              datos.
             </p>
           </Card>
         </div>
-
       </div>
     </div>
   );
 }
-
