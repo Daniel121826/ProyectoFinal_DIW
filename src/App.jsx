@@ -10,7 +10,6 @@ function App() {
   const [darkMode, setDarkMode] = useState(null);
 
   useEffect(() => {
-    // Obtener preferencia guardada o del sistema
     const stored = localStorage.getItem("theme");
     if (stored) {
       setDarkMode(stored === "dark");
@@ -33,6 +32,7 @@ function App() {
     }
   }, [darkMode]);
   if (darkMode === null) return null;
+
   return (
     <div>
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />

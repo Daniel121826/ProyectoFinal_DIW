@@ -10,7 +10,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
 
   return (
     <nav
-      className={`w-full bg-black shadow-md ${
+      className={`w-full shadow-md transition-colors duration-300 ${
         darkMode ? "bg-black text-white" : "bg-white text-black"
       }`}
     >
@@ -28,14 +28,15 @@ export default function Navbar({ darkMode, setDarkMode }) {
           />
         </div>
 
-        <div className="md:hidden">
+        <div className="flex items-center gap-4 md:hidden">
+          <DarkModeButton darkMode={darkMode} setDarkMode={setDarkMode} />
           <button
             onClick={toggleMenu}
             className={`text-2xl focus:outline-none transition-colors duration-200 ${
               isOpen
                 ? "hover:text-red-500 text-white"
                 : "hover:text-blue-500 text-white"
-            }`}
+            }${darkMode ? "text-black" : "text-white"}`}
           >
             {isOpen ? <FaTimes /> : <FaBars />}
           </button>
@@ -64,22 +65,22 @@ export default function Navbar({ darkMode, setDarkMode }) {
             darkMode ? "bg-black text-white" : "bg-white text-black"
           }`}
         >
-          <li>
+          <li className="hover:text-blue-500 transition-colors duration-200">
             <a href="#inicio" onClick={toggleMenu}>
               Inicio
             </a>
           </li>
-          <li>
+          <li className="hover:text-blue-500 transition-colors duration-200">
             <a href="#servicios" onClick={toggleMenu}>
               Servicios
             </a>
           </li>
-          <li>
+          <li className="hover:text-blue-500 transition-colors duration-200">
             <a href="#nosotros" onClick={toggleMenu}>
               Nosotros
             </a>
           </li>
-          <li>
+          <li className="hover:text-blue-500 transition-colors duration-200">
             <a href="#contacto" onClick={toggleMenu}>
               Contáctanos
             </a>
