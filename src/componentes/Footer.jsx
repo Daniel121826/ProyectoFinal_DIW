@@ -2,9 +2,11 @@ import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import logo from "../assets/logo.png";
 import DarkModeButton from "./DarkModeButton";
 
-export default function Footer({ setNavbarDarkMode }) {
+export default function Footer({ darkMode }) {
   return (
-    <footer className="w-full bg-black text-white py-6">
+    <footer
+      className={`w-full py-6 ${darkMode ? "bg-black text-white" : "bg-white text-black"}`}
+    >
       <div className="w-[90%] mx-auto flex items-center">
         <div className="flex-1 md:text-left text-sm md:text-base">
           &copy; {new Date().getFullYear()} <br /> Gestor de Usuarios. <br />

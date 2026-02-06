@@ -2,27 +2,11 @@ import { useState } from "react";
 import logo1 from "../assets/logo_brocha.png";
 import logo2 from "../assets/logo_texto.png";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { useEffect } from "react";
 import DarkModeButton from "./DarkModeButton";
 
-export default function Navbar() {
+export default function Navbar({ darkMode, setDarkMode }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(
-    document.body.classList.contains("dark"),
-  );
-
   const toggleMenu = () => setIsOpen(!isOpen);
-
-  useEffect(() => {
-    const observer = new MutationObserver(() => {
-      setDarkMode(document.body.classList.contains("dark"));
-    });
-    observer.observe(document.body, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <nav
@@ -58,7 +42,7 @@ export default function Navbar() {
         </div>
 
         <ul className="hidden md:flex items-center gap-8 text-base font-medium">
-          <DarkModeButton />
+          <DarkModeButton darkMode={darkMode} setDarkMode={setDarkMode} />
           <li className="hover:text-blue-500 transition-colors duration-200">
             <a href="#inicio">Inicio</a>
           </li>
