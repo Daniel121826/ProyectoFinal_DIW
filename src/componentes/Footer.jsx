@@ -1,17 +1,17 @@
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import logo from "../assets/logo.png";
+import DarkModeButton from "./DarkModeButton";
 
 export default function Footer() {
   return (
     <footer className="w-full bg-black text-white py-6">
       <div className="w-[90%] mx-auto flex items-center">
-        {/* Izquierda: Texto */}
         <div className="flex-1 md:text-left text-sm md:text-base">
           &copy; {new Date().getFullYear()} <br /> Gestor de Usuarios. <br />
-          Todos los derechos reservados.
+          Todos los derechos reservados. <br />
+          <DarkModeButton />
         </div>
 
-        {/* Centro: Logo */}
         <div className="flex-1 flex justify-center">
           <img
             src={logo}
@@ -20,7 +20,6 @@ export default function Footer() {
           />
         </div>
 
-        {/* Derecha: Redes Sociales */}
         <div className="flex-1 flex justify-center md:justify-end gap-4 text-xl">
           <a
             href="https://facebook.com"
