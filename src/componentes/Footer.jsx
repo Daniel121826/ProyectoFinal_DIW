@@ -2,7 +2,7 @@ import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import logo from "../assets/logo.png";
 import DarkModeButton from "./DarkModeButton";
 
-export default function Footer() {
+export default function Footer({ setNavbarDarkMode }) {
   return (
     <footer className="w-full bg-black text-white py-6">
       <div className="w-[90%] mx-auto flex items-center">

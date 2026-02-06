@@ -5,11 +5,10 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="w-full bg-black shadow-md text-blue-500">
+    <nav className="w-full bg-black shadow-md text-white">
       <div className="w-[90%] mx-auto flex items-center justify-between py-4">
         <div className="flex items-center gap-2">
           <img
@@ -38,16 +37,16 @@ export default function Navbar() {
         </div>
 
         <ul className="hidden md:flex items-center gap-8 text-base font-medium">
-          <li>
+          <li className="hover:text-blue-500 transition-colors duration-200">
             <a href="#inicio">Inicio</a>
           </li>
-          <li>
+          <li className="hover:text-blue-500 transition-colors duration-200">
             <a href="#servicios">Servicios</a>
           </li>
-          <li>
+          <li className="hover:text-blue-500 transition-colors duration-200">
             <a href="#nosotros">Nosotros</a>
           </li>
-          <li>
+          <li className="hover:text-blue-500 transition-colors duration-200">
             <a href="#contacto">Contáctanos</a>
           </li>
         </ul>
