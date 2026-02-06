@@ -8,8 +8,7 @@ export default function Footer({ setNavbarDarkMode }) {
       <div className="w-[90%] mx-auto flex items-center">
         <div className="flex-1 md:text-left text-sm md:text-base">
           &copy; {new Date().getFullYear()} <br /> Gestor de Usuarios. <br />
-          Todos los derechos reservados. <br />
-          <DarkModeButton />
+          Todos los derechos reservados.
         </div>
 
         <div className="flex-1 flex justify-center">

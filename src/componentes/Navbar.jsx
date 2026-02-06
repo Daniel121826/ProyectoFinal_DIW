@@ -2,13 +2,34 @@ import { useState } from "react";
 import logo1 from "../assets/logo_brocha.png";
 import logo2 from "../assets/logo_texto.png";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useEffect } from "react";
+import DarkModeButton from "./DarkModeButton";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(
+    document.body.classList.contains("dark"),
+  );
+
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setDarkMode(document.body.classList.contains("dark"));
+    });
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <nav className="w-full bg-black shadow-md text-white">
+    <nav
+      className={`w-full bg-black shadow-md ${
+        darkMode ? "bg-black text-white" : "bg-white text-black"
+      }`}
+    >
       <div className="w-[90%] mx-auto flex items-center justify-between py-4">
         <div className="flex items-center gap-2">
           <img
@@ -37,6 +58,7 @@ export default function Navbar() {
         </div>
 
         <ul className="hidden md:flex items-center gap-8 text-base font-medium">
+          <DarkModeButton />
           <li className="hover:text-blue-500 transition-colors duration-200">
             <a href="#inicio">Inicio</a>
           </li>
@@ -53,7 +75,11 @@ export default function Navbar() {
       </div>
 
       {isOpen && (
-        <ul className="flex flex-col items-center gap-4 bg-black text-base font-medium md:hidden py-4">
+        <ul
+          className={`flex flex-col items-center gap-4 py-4 md:hidden transition-colors duration-300 ${
+            darkMode ? "bg-black text-white" : "bg-white text-black"
+          }`}
+        >
           <li>
             <a href="#inicio" onClick={toggleMenu}>
               Inicio
