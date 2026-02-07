@@ -1,18 +1,21 @@
 import { useState } from "react";
 import ContactButton from "./Button";
 
-export default function ContactForm() {
+export default function ContactForm({ darkMode }) {
   const formData = useState({
     company: "",
     email: "",
-    phone: ""
+    phone: "",
+    darkMode,
   });
 
   return (
-    <form className="w-full max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
-      
+    <form
+      className={`w-full max-w-md mx-auto p-6 rounded-lg shadow-md 
+    ${darkMode ? "bg-gray-800 text-gray-100" : "bg-white text-gray-800"}`}
+    >
       <div className="mb-4">
-        <label htmlFor="company" className="block text-sm font-medium mb-1 text-gray-700">
+        <label htmlFor="company" className="block text-sm font-medium mb-1">
           Nombre de la empresa
         </label>
         <input
@@ -21,13 +24,17 @@ export default function ContactForm() {
           name="company"
           value={formData.company}
           placeholder="Empresa S.A."
-          className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          required
+          className={`
+    w-full border border-gray-300 rounded-md p-2
+    focus:outline-none focus:ring-2 focus:ring-blue-500
+    text-black placeholder-gray-400
+    ${darkMode ? "bg-gray-700 text-white placeholder-gray-400 border-gray-600" : ""}
+  `}
         />
       </div>
 
       <div className="mb-4">
-        <label htmlFor="email" className="block text-sm font-medium mb-1 text-gray-700">
+        <label htmlFor="email" className="block text-sm font-medium mb-1">
           Email
         </label>
         <input
@@ -36,13 +43,17 @@ export default function ContactForm() {
           name="email"
           value={formData.email}
           placeholder="correo@empresa.com"
-          className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          required
+          className={`
+    w-full border border-gray-300 rounded-md p-2
+    focus:outline-none focus:ring-2 focus:ring-blue-500
+    text-black placeholder-gray-400
+    ${darkMode ? "bg-gray-700 text-white placeholder-gray-400 border-gray-600" : ""}
+  `}
         />
       </div>
 
       <div className="mb-4">
-        <label htmlFor="phone" className="block text-sm font-medium mb-1 text-gray-700">
+        <label htmlFor="phone" className="block text-sm font-medium mb-1">
           Teléfono
         </label>
         <input
@@ -51,12 +62,19 @@ export default function ContactForm() {
           name="phone"
           value={formData.phone}
           placeholder="+34 600 000 000"
-          className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          required
+          className={`
+    w-full border border-gray-300 rounded-md p-2
+    focus:outline-none focus:ring-2 focus:ring-blue-500
+    text-black placeholder-gray-400
+    ${darkMode ? "bg-gray-700 text-white placeholder-gray-400 border-gray-600" : ""}
+  `}
         />
       </div>
 
-      <ContactButton text="Contactanos" className="bg-blue-600 hover:bg-blue-700" />
+      <ContactButton
+        text="Contactanos"
+        className="bg-blue-600 hover:bg-blue-700"
+      />
     </form>
   );
 }

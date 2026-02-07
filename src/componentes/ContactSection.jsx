@@ -1,7 +1,7 @@
 import ContactForm from "./ContactForm";
 import background from "../assets/background.png";
 
-export default function ContactSection() {
+export default function ContactSection({ darkMode }) {
   return (
     <div
       className="relative w-full bg-cover bg-center py-20"
@@ -27,7 +27,7 @@ export default function ContactSection() {
         </div>
 
         <div className="flex-1">
-          <ContactForm />
+          <ContactForm darkMode={darkMode} />
         </div>
       </div>
     </div>

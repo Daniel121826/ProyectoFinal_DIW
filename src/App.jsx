@@ -36,8 +36,8 @@ function App() {
   return (
     <div>
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <ContactSection />
-      <CardsSection />
+      <ContactSection darkMode={darkMode} />
+      <CardsSection darkMode={darkMode} />
       <CarruselSection />
       <Footer darkMode={darkMode} />
     </div>
