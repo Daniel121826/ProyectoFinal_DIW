@@ -17,7 +17,7 @@ export default function CarruselSection() {
   }, []);
 
   return (
-    <div className="relative w-full h-[600px] overflow-hidden">
+    <div className="relative w-full h-150 overflow-hidden">
       <div
         className="absolute inset-0 flex transition-transform duration-1000"
         style={{ transform: `translateX(-${currentBg * 100}%)` }}
@@ -25,7 +25,7 @@ export default function CarruselSection() {
         {backgrounds.map((bg, index) => (
           <div
             key={index}
-            className="w-full h-full flex-shrink-0 bg-cover bg-center"
+            className="w-full h-full shrink-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${bg})` }}
           ></div>
         ))}
