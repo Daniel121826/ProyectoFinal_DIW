@@ -4,6 +4,7 @@ import Footer from "./componentes/Footer";
 import ContactSection from "./componentes/ContactSection";
 import CardsSection from "./componentes/CardsSection";
 import CarruselSection from "./componentes/CarruselSection";
+import FuncionamientoSection from "./componentes/FuncionamientoSection";
 import { useState, useEffect } from "react";
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
       <ContactSection darkMode={darkMode} />
       <CardsSection darkMode={darkMode} />
       <CarruselSection />
+       <FuncionamientoSection darkMode={darkMode} />
       <Footer darkMode={darkMode} />
     </div>
   );
