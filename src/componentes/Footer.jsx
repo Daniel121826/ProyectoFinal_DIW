@@ -1,5 +1,6 @@
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import logo from "../assets/logo.png";
+import logoDark from "../assets/logo_dark.png";
 
 export default function Footer({ darkMode }) {
   return (
@@ -14,7 +15,7 @@ export default function Footer({ darkMode }) {
 
         <div className="flex-1 flex justify-center">
           <img
-            src={logo}
+            src={darkMode ? logo : logoDark}
             alt="Logo"
             className={`h-24 w-24 object-cover rounded-full border-2 ${darkMode ? "border-white" : "border-black"}`}
           />

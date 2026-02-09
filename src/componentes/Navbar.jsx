@@ -1,6 +1,7 @@
 import { useState } from "react";
 import logo1 from "../assets/logo_brocha.png";
 import logo2 from "../assets/logo_texto.png";
+import logo2Dark from "../assets/logo_texto_dark.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 import DarkModeButton from "./DarkModeButton";
 
@@ -22,10 +23,11 @@ export default function Navbar({ darkMode, setDarkMode }) {
             className="h-12 w-auto cursor-pointer object-contain"
           />
           <img
-            src={logo2}
+            src={darkMode ? logo2 : logo2Dark}
             alt="Logo 2"
             className="h-12 w-auto cursor-pointer object-contain"
           />
+
         </div>
 
         <div className="flex items-center gap-4 md:hidden">
