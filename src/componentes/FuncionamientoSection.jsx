@@ -4,11 +4,11 @@ export default function FuncionamientoSection({ darkMode }) {
   // Cambiar el fondo del body según darkMode
   useEffect(() => {
     if (darkMode) {
-      document.body.classList.add("bg-black", "text-white");
-      document.body.classList.remove("bg-gray-50", "text-gray-800");
+      document.body.classList.add("bg-gray-900", "text-white");
+      document.body.classList.remove("bg-gray-100", "text-gray-800");
     } else {
-      document.body.classList.add("bg-gray-50", "text-gray-800");
-      document.body.classList.remove("bg-black", "text-white");
+      document.body.classList.add("bg-gray-100", "text-gray-800");
+      document.body.classList.remove("bg-gray-900", "text-white");
     }
 
     // Limpieza cuando el componente se desmonte
