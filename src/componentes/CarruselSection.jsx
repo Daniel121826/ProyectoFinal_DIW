@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import bg1 from "../assets/bg1.png";
 import bg2 from "../assets/bg2.png";
 import bg3 from "../assets/bg3.png";
-import { FaStar, FaSmile, FaThumbsUp } from "react-icons/fa";
 import bombilla from "../assets/bombilla.png";
 import pizarra from "../assets/pizarra.png";
 import like from "../assets/like.png";
