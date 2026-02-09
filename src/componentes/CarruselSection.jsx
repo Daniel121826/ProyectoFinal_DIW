@@ -3,6 +3,9 @@ import bg1 from "../assets/bg1.png";
 import bg2 from "../assets/bg2.png";
 import bg3 from "../assets/bg3.png";
 import { FaStar, FaSmile, FaThumbsUp } from "react-icons/fa";
+import bombilla from "../assets/bombilla.png";
+import pizarra from "../assets/pizarra.png";
+import like from "../assets/like.png";
 
 const backgrounds = [bg1, bg2, bg3];
 
@@ -44,19 +47,31 @@ export default function CarruselSection() {
 
         <div className="flex md:flex-row gap-8 mt-12 justify-between w-full max-w-4xl">
           <div className="flex flex-col items-center gap-2 translate-y-4 md:translate-y-6">
-            <FaStar className="text-yellow-400 text-4xl" />
+            <img
+              src={bombilla}
+              alt="Valoración sobresaliente"
+              className="w-20 h-20 object-contain"
+            />
             <span className="font-bold text-xl">97%</span>
             <p className="text-sm">Nos califican como sobresaliente</p>
           </div>
 
           <div className="flex flex-col items-center gap-2 -translate-y-4 md:-translate-y-6">
-            <FaSmile className="text-green-400 text-4xl" />
+            <img
+              src={pizarra}
+              alt="Clientes satisfechos"
+              className="w-20 h-20 object-contain"
+            />
             <span className="font-bold text-xl">92%</span>
             <p className="text-sm">Satisfechos con nuestro servicio</p>
           </div>
 
           <div className="flex flex-col items-center gap-2 translate-y-4 md:translate-y-6">
-            <FaThumbsUp className="text-blue-400 text-4xl" />
+            <img
+              src={like}
+              alt="Recomendaciones"
+              className="w-20 h-20 object-contain"
+            />
             <span className="font-bold text-xl">88%</span>
             <p className="text-sm">Recomiendan nuestros proyectos</p>
           </div>
