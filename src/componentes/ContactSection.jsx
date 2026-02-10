@@ -9,9 +9,9 @@ export default function ContactSection({ darkMode }) {
     >
       <div className="absolute inset-0 bg-black/50"></div>
 
-      <div className="relative w-[90%] mx-auto flex flex-col md:flex-row text-center sm:text-start gap-12 p-4">
+      <div className="relative w-[90%] mx-auto flex flex-col md:flex-row text-start gap-12 p-4">
         <div className="flex-1 text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 md:text-start text-center">
             Bienvenido Artista
           </h2>
           <p className="text-base md:text-lg leading-relaxed">
