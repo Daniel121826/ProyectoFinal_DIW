@@ -23,13 +23,13 @@ export default function Card({
       >
         {image && (
           <div
-            className="w-full sm:h-48 overflow-hidden cursor-pointer"
+            className="w-full h-48 md:h-56 overflow-hidden cursor-pointer"
             onClick={() => setOpen(true)}
           >
             <img
               src={image}
               alt={title}
-              className="w-full h-full object-cover
+              className="w-full h-full object-contain
               transition-transform duration-300 hover:scale-105"
             />
           </div>
