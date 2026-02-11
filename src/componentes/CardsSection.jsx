@@ -9,7 +9,9 @@ export default function CardsSection({ darkMode }) {
   return (
     <div
       className={
-        darkMode ? "w-full py-20 bg-gray-900" : "w-full py-20 bg-gray-100"
+        darkMode
+          ? "w-full py-20 bg-card-section-dark"
+          : "w-full py-20 bg-card-section-light"
       }
     >
       <div className="w-[90%] mx-auto flex flex-col lg:flex-row gap-8 text-start">

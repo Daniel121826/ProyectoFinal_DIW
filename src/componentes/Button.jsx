@@ -4,7 +4,7 @@ export default function Button({
   color = "blue",
   fullWidth = false,
   type = "button",
-  className = ""
+  className = "",
 }) {
   return (
     <button
@@ -13,7 +13,7 @@ export default function Button({
       className={`
         ${fullWidth ? "w-full" : "w-auto"}
         bg-${color}-600 hover:bg-${color}-700
-        text-white font-semibold rounded-md
+        text-neutral-white font-semibold rounded-md
         transition-colors duration-300
         py-2 px-6
         ${className}

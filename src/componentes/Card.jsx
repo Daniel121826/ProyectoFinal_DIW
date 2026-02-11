@@ -15,9 +15,9 @@ export default function Card({
       <div
         className={
           darkMode
-            ? `bg-gray-800 shadow-lg rounded-xl overflow-hidden
-              flex flex-col text-white ${className}`
-            : `bg-white shadow-lg rounded-xl overflow-hidden
+            ? `bg-card-dark shadow-lg rounded-xl overflow-hidden
+              flex flex-col text-neutral-white ${className}`
+            : `bg-neutral-white shadow-lg rounded-xl overflow-hidden
               flex flex-col text-black ${className}`
         }
       >

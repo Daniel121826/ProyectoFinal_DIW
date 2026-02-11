@@ -12,7 +12,9 @@ export default function Navbar({ darkMode, setDarkMode }) {
   return (
     <nav
       className={`w-full shadow-md transition-colors duration-300 ${
-        darkMode ? "bg-black text-white" : "bg-white text-black"
+        darkMode
+          ? "bg-neutral-black text-neutral-white"
+          : "bg-neutral-white text-neutral-black"
       }`}
     >
       <div className="w-[90%] mx-auto flex items-center justify-between py-4">
@@ -27,7 +29,6 @@ export default function Navbar({ darkMode, setDarkMode }) {
             alt="Logo 2"
             className="h-12 w-auto cursor-pointer object-contain"
           />
-
         </div>
 
         <div className="flex items-center gap-4 md:hidden">
@@ -36,9 +37,9 @@ export default function Navbar({ darkMode, setDarkMode }) {
             onClick={toggleMenu}
             className={`text-2xl focus:outline-none transition-colors duration-200 ${
               isOpen
-                ? "hover:text-red-500 text-white"
-                : "hover:text-blue-500 text-white"
-            }${darkMode ? "text-black" : "text-white"}`}
+                ? "hover:text-varios-rojo text-neutral-white"
+                : "hover:text-primario-default text-neutral-white"
+            }${darkMode ? "text-neutral-black" : "text-neutral-white"}`}
           >
             {isOpen ? <FaTimes /> : <FaBars />}
           </button>
@@ -46,16 +47,16 @@ export default function Navbar({ darkMode, setDarkMode }) {
 
         <ul className="hidden md:flex items-center gap-8 text-base font-medium">
           <DarkModeButton darkMode={darkMode} setDarkMode={setDarkMode} />
-          <li className="hover:text-blue-500 transition-colors duration-200">
+          <li className="hover:text-primario-default transition-colors duration-200">
             <a href="#inicio">Inicio</a>
           </li>
-          <li className="hover:text-blue-500 transition-colors duration-200">
+          <li className="hover:text-primario-default transition-colors duration-200">
             <a href="#servicios">Servicios</a>
           </li>
-          <li className="hover:text-blue-500 transition-colors duration-200">
+          <li className="hover:text-primario-default transition-colors duration-200">
             <a href="#nosotros">Nosotros</a>
           </li>
-          <li className="hover:text-blue-500 transition-colors duration-200">
+          <li className="hover:text-primario-default transition-colors duration-200">
             <a href="#contacto">Contáctanos</a>
           </li>
         </ul>
@@ -64,25 +65,27 @@ export default function Navbar({ darkMode, setDarkMode }) {
       {isOpen && (
         <ul
           className={`flex flex-col items-center gap-4 py-4 md:hidden transition-colors duration-300 ${
-            darkMode ? "bg-black text-white" : "bg-white text-black"
+            darkMode
+              ? "bg-neutral-black text-neutral-white"
+              : "bg-neutral-white text-neutral-black"
           }`}
         >
-          <li className="hover:text-blue-500 transition-colors duration-200">
+          <li className="hover:text-primario-default transition-colors duration-200">
             <a href="#inicio" onClick={toggleMenu}>
               Inicio
             </a>
           </li>
-          <li className="hover:text-blue-500 transition-colors duration-200">
+          <li className="hover:text-primario-default transition-colors duration-200">
             <a href="#servicios" onClick={toggleMenu}>
               Servicios
             </a>
           </li>
-          <li className="hover:text-blue-500 transition-colors duration-200">
+          <li className="hover:text-primario-default transition-colors duration-200">
             <a href="#nosotros" onClick={toggleMenu}>
               Nosotros
             </a>
           </li>
-          <li className="hover:text-blue-500 transition-colors duration-200">
+          <li className="hover:text-primario-default transition-colors duration-200">
             <a href="#contacto" onClick={toggleMenu}>
               Contáctanos
             </a>

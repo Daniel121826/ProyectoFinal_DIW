@@ -1,2 +1,17 @@
 @import "tailwindcss";
 
+   @theme{
+    --color-card-dark: #1f2937;
+    --color-card-input: #364153;
+    --placeholder-card-placeholder: #9ca3af;
+    --color-card-section-dark: #111827;
+    --color-card-section-light: #f3f4f6;
+    --color-neutral-black: #000000;
+    --color-neutral-white: #ffffff;
+    --color-primario-default: #2563eb;
+    --color-primario-hover: #1d4ed8;
+    --color-primario-light: #3b82f6;
+    --color-varios-naranja: #d08700;
+    --color-varios-rojo: #f12c36;
+  }
+

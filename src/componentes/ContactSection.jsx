@@ -7,10 +7,10 @@ export default function ContactSection({ darkMode }) {
       className="relative w-full bg-cover bg-center py-20"
       style={{ backgroundImage: `url(${background})` }}
     >
-      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 bg-neutral-black/50"></div>
 
       <div className="relative w-[90%] mx-auto flex flex-col md:flex-row text-start gap-12 p-4">
-        <div className="flex-1 text-white">
+        <div className="flex-1 text-neutral-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 md:text-start text-center">
             Bienvenido Artista
           </h2>

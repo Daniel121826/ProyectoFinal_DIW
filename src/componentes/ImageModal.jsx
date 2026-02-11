@@ -3,7 +3,7 @@ function ImageModal({ src, alt, onClose }) {
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center"
+      className="fixed inset-0 z-50 bg-neutral-black/80 flex items-center justify-center"
       onClick={onClose}
     >
       <div
@@ -12,7 +12,7 @@ function ImageModal({ src, alt, onClose }) {
       >
         <button
           onClick={onClose}
-          className="absolute -top-10 right-0 text-white text-3xl hover:text-red-500"
+          className="absolute -top-10 right-0 text-neutral-white text-3xl hover:text-varios-rojo"
         >
           ✕
         </button>

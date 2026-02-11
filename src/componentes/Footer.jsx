@@ -5,7 +5,7 @@ import logoDark from "../assets/logo_dark.png";
 export default function Footer({ darkMode }) {
   return (
     <footer
-      className={`w-full py-6 ${darkMode ? "bg-black text-white" : "bg-white text-black"}`}
+      className={`w-full py-6 ${darkMode ? "bg-neutral-black text-neutral-white" : "bg-neutral-white text-neutral-black"}`}
     >
       <div className="w-[90%] mx-auto flex items-center">
         <div className="flex-1 md:text-left text-sm md:text-base">
@@ -17,7 +17,7 @@ export default function Footer({ darkMode }) {
           <img
             src={darkMode ? logo : logoDark}
             alt="Logo"
-            className={`h-24 w-24 object-cover rounded-full border-2 ${darkMode ? "border-white" : "border-black"}`}
+            className={`h-24 w-24 object-cover rounded-full border-2 ${darkMode ? "border-neutral-white" : "border-neutral-black"}`}
           />
         </div>
 
@@ -26,7 +26,7 @@ export default function Footer({ darkMode }) {
             href="https://facebook.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-500 transition-colors duration-300"
+            className="hover:text-primario-default transition-colors duration-300"
           >
             <FaFacebookF />
           </a>
@@ -34,7 +34,7 @@ export default function Footer({ darkMode }) {
             href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-500 transition-colors duration-300"
+            className="hover:text-primario-default transition-colors duration-300"
           >
             <FaTwitter />
           </a>
@@ -42,7 +42,7 @@ export default function Footer({ darkMode }) {
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-500 transition-colors duration-300"
+            className="hover:text-primario-default transition-colors duration-300"
           >
             <FaInstagram />
           </a>

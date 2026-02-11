@@ -12,7 +12,7 @@ export default function ContactForm({ darkMode }) {
   return (
     <form
       className={`w-full max-w-md mx-auto p-6 rounded-lg shadow-md 
-    ${darkMode ? "bg-gray-800 text-gray-100" : "bg-white text-gray-800"}`}
+    ${darkMode ? "bg-card-dark text-gray-100" : "bg-neutral-white text-gray-800"}`}
     >
       <div className="mb-4">
         <label htmlFor="company" className="block text-sm font-medium mb-1">
@@ -26,9 +26,9 @@ export default function ContactForm({ darkMode }) {
           placeholder="Empresa S.A."
           className={`
     w-full border border-gray-300 rounded-md p-2
-    focus:outline-none focus:ring-2 focus:ring-blue-500
-    text-black placeholder-gray-400
-    ${darkMode ? "bg-gray-700 text-white placeholder-gray-400 border-gray-600" : ""}
+    focus:outline-none focus:ring-2 focus:ring-primario-default
+    text-black placeholder-card-placeholder
+    ${darkMode ? "bg-card-input text-white placeholder-card-placeholder border-gray-600" : ""}
   `}
         />
       </div>
@@ -45,9 +45,9 @@ export default function ContactForm({ darkMode }) {
           placeholder="correo@empresa.com"
           className={`
     w-full border border-gray-300 rounded-md p-2
-    focus:outline-none focus:ring-2 focus:ring-blue-500
-    text-black placeholder-gray-400
-    ${darkMode ? "bg-gray-700 text-white placeholder-gray-400 border-gray-600" : ""}
+    focus:outline-none focus:ring-2 focus:ring-primario-default
+    text-black placeholder-card-placeholder
+    ${darkMode ? "bg-card-input text-white placeholder-card-placeholder border-gray-600" : ""}
   `}
         />
       </div>
@@ -64,16 +64,16 @@ export default function ContactForm({ darkMode }) {
           placeholder="+34 600 000 000"
           className={`
     w-full border border-gray-300 rounded-md p-2
-    focus:outline-none focus:ring-2 focus:ring-blue-500
-    text-black placeholder-gray-400
-    ${darkMode ? "bg-gray-700 text-white placeholder-gray-400 border-gray-600" : ""}
+    focus:outline-none focus:ring-2 focus:ring-primario-default
+    text-neutral-black placeholder-card-placeholder
+    ${darkMode ? "bg-card-input text-white placeholder-card-placeholder border-gray-600" : ""}
   `}
         />
       </div>
 
       <ContactButton
         text="Contactanos"
-        className="bg-blue-600 hover:bg-blue-700"
+        className="bg-primario-default hover:bg-primario-hover"
       />
     </form>
   );
