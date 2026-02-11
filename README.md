@@ -51,3 +51,6 @@ Se han implementado varios componentes reutilizables como `Navbar`, `Footer`, `C
 El modo oscuro se mantiene incluso al recargar la página gracias a `localStorage`.  
 El botón detecta la configuración del sistema operativo al iniciar la página.
 
+## Proyecto Figma
+
+https://www.figma.com/design/hkJXmpDEhZYMNKLQp9wyfo/AiDan-Creative?node-id=0-1&t=ikfGS0NBJ93Vf48A-1
