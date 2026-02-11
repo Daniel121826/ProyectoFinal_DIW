@@ -1,32 +1,11 @@
-import { useEffect } from "react";
+import ContactButton from "./Button";
 
 export default function FuncionamientoSection({ darkMode }) {
-  useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add("bg-gray-900", "text-neutral-white");
-      document.body.classList.remove("bg-gray-100", "text-gray-800");
-    } else {
-      document.body.classList.add("bg-gray-100", "text-gray-800");
-      document.body.classList.remove("bg-gray-900", "text-neutral-white");
-    }
-
-    return () => {
-      document.body.classList.remove(
-        "bg-gray-900",
-        "text-neutral-white",
-        "bg-gray-100",
-        "text-gray-800",
-      );
-    };
-  }, [darkMode]);
-
   return (
-    <section className="px-6 py-16">
+    <section className={darkMode ? "px-6 py-16 bg-card-section-dark text-neutral-white" : "px-6 py-16 bg-card-section-light text-neutral-black"}>
       <div className="flex flex-col md:flex-row gap-12 items-stretch max-w-6xl mx-auto">
         <div className="flex-1">
-          <div
-            className={`p-10 rounded-2xl shadow-lg h-full w-full ${darkMode ? "bg-gray-800 text-gray-100" : "bg-neutral-white text-gray-800"}`}
-          >
+          <div className={`p-10 rounded-2xl shadow-lg h-full w-full ${darkMode ? "bg-card-dark text-neutral-white" : "bg-neutral-white text-neutral-black"}`}>
             <h3 className="text-xl font-semibold mb-4">
               Creamos proyectos como si fueran lienzos
             </h3>
@@ -60,11 +39,9 @@ export default function FuncionamientoSection({ darkMode }) {
           ].map((text, index) => (
             <div
               key={index}
-              className={`p-4 rounded shadow flex items-start gap-3 ${darkMode ? "bg-gray-800 text-gray-100" : "bg-neutral-white text-gray-800"}`}
+              className={`p-4 rounded shadow flex items-start gap-3 ${darkMode ? "bg-card-dark text-neutral-white" : "bg-neutral-white text-neutral-black"}`}
             >
-              <span
-                className={`font-bold ${darkMode ? "text-primario-hover" : "text-primario-default"}`}
-              >
+              <span className={`font-bold ${darkMode ? "text-primario-hover" : "text-primario-default"}`}>
                 {String(index + 1).padStart(2, "0")}.
               </span>
               <p>{text}</p>
@@ -72,15 +49,10 @@ export default function FuncionamientoSection({ darkMode }) {
           ))}
 
           <div className="mt-auto">
-            <button
-              className={`font-semibold px-6 py-2 rounded transition w-full ${
-                darkMode
-                  ? "bg-blue-600 text-white hover:bg-primario-hover"
-                  : "bg-primario-light text-neutral-white hover:bg-primario-default"
-              }`}
-            >
-              Ver más
-            </button>
+            <ContactButton
+              text="Ver mas"
+              className={`w-full ${darkMode ? "bg-primario-default hover:bg-primario-hover text-white" : "bg-primario-light hover:bg-primario-default text-neutral-white"}`}
+            />
           </div>
         </div>
       </div>
